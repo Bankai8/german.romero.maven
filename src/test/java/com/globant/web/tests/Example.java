@@ -17,46 +17,56 @@ public class Example {
 
     @BeforeSuite
     public void beforeSuite() {
-        log.info ("User without account - beforeSuite");
+        log.info ("Open the application - beforeSuite");
     }
 
     @BeforeClass
     public void beforeClass() {
-        log.info ("Enter and interact with the bank manager - beforeClass");
+//        log.info ("Enter and interact with the bank manager - beforeClass");
     }
 
     @BeforeTest
     public void beforeTest() {
-        log.info ("Had the documents and ID to open an account - beforeTest");
+//        log.info (" - beforeTest");
     }
 
     @BeforeMethod
     public void beforeMethod() {
-        log.info ("Take a pen to sign the documents - beforeMethod");
+        log.info ("Had a user in the application or create a new one - beforeMethod");
     }
 
     @AfterSuite
     public void afterSuite() {
-            log.info ("Leave the bank - afterSuite");
+            log.info ("Close the application - afterSuite");
     }
 
     @AfterClass
     public void afterClass() {
-        log.info ("Put the pen in the desk of the manager - afterClass");
+//        log.info ("Put the pen in the desk of the manager - afterClass");
     }
 
     @AfterTest
     public void afterTest() {
-        log.info ("Withdraw from the place where the manager is - afterTest");
+//        log.info (" - afterTest");
     }
 
     @AfterMethod
     public void afterMethod() {
-        log.info ("Close new account created - afterMethod");
+        log.info ("Log Out - afterMethod");
     }
     @Test(groups = {"Exercise1"})
     public void makeTransactionInATM() {
-    	log.info("Open the account by sign the digital documents - Test");
+    	log.info("CREATE ACCOUNT - Test");
+    }
+    
+    @Test(groups = {"Exercise1"})
+    public void make2TransactionInATM() {
+    	log.info("LOG IN - Test");
+    }
+    
+    @Test(groups = {"Exercise1"})
+    public void make3TransactionInATM() {
+    	log.info("CANCEL ACCOUNT");
     }
     
     @Test(groups = {"group1", "group2"})
